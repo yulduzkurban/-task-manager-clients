@@ -1,0 +1,47 @@
+$editor-color: #303240;
+
+.user {
+  padding: 24px 0px;
+  background-color: $header__background-color;
+
+  &__container {
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+  }
+
+  &__block {
+    &-name {
+      margin-bottom: 5px;
+      @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+      @include headingFonts($header__text-color, 24px, 400, 31.2px, none);
+
+      @include sm {
+        font-size: 18px;
+      }
+    }
+    &-editor {
+      width: 43px;
+      padding: 4px 6px;
+      border-radius: 4px;
+      text-align: center;
+      background-color: $editor__background-color;
+      @include headingFonts($editor-color, 10px, 400, 12px, none);
+
+      @include sm {
+        font-size: 8px;
+        padding: 2px 4px;
+      }
+    }
+
+    &-primary {
+      @include headingFonts($primary-color, 14.48px, 400, 25.6px, none);
+    }
+
+    &-number {
+      @include headingFonts($header__text-color, 14.48px, 500, 17.52px, none);
+
+      @include sm {
+        margin-top: 5px;
+      }
+    }
+  }
+}

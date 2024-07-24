@@ -1,0 +1,26 @@
+.header {
+  padding: 22.5px 0px;
+  background-color: $header__background-color;
+  border-bottom: 1px solid $header__text-color;
+
+  &__container {
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+  }
+
+  &__block {
+    @include flexLayout(flex, flex-start, center, 10px, row nowrap);
+    &-logo {
+      width: 20px;
+      height: 20px;
+    }
+
+    &-logo-text {
+      @include headingFonts($header__text-color, 14.48px, 600, 17.52px, none);
+    }
+  }
+
+  &-back-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
